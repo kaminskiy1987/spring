@@ -1,0 +1,12 @@
+<web-app>
+    <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-class>dev.maven</servlet-class>
+        <servlet-name>App</servlet-name>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>App</servlet-name>
+        <url-pattern>/App</url-pattern>
+    </servlet-mapping>
+
+</web-app>
