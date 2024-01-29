@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>users</title>
+    <link th:href="@{/styles.css}" rel="stylesheet" />
+</head>
+<body>
+<h3>Users list:</h3>
+    <form class="large_form">
+        <h1>Id</h1>
+        <h1>Name</h1>
+        <h1>Age</h1>
+        <h1>Email</h1>
+        <h1>Commands</h1>
+    </form>
+
+    <form class="large_form" th:each="user: ${users}">
+        <p th:text="${user.id}"></p>
+        <input type="text" th:value="${user.name}" name="name">
+        <input type="text" th:value="${user.age}" name="age">
+        <input type="text" th:value="${user.email}" name="email">
+        <div class="control_buttons">
+<!--            <button name="save" th:action="@{/save}" method="post">save</button>-->
+<!--            <button name="delete" th:action="@{/delete}" method="post">delete</button>-->
+            <button name="save" th:href="@{/save}" method="post">save</button>
+            <button name="delete" th:href="@{/delete}" method="post">delete</button>
+        </div>
+    </form>
+    <p></p>
+    <form class="large_form">
+        <h1>Name</h1>
+        <h1>Age</h1>
+        <h1>Email</h1>
+        <h1></h1>
+    </form>
+    <form class="small_form">
+        <input type="text" name="new_name">
+        <input type="test" name="new_age">
+        <input type="text" name="new_email">
+        <div class="add_buttons">
+            <button name="add">add</button>
+        </div>
+    </form>
+
+</body>
+</html>
